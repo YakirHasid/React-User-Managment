@@ -1,0 +1,26 @@
+.user-input {
+    display: flex;
+    flex-direction: row;
+    align-items: center;    
+}
+
+.user-input label {    
+    flex: 1;
+    color: #fa923f;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 10px;    
+}
+
+.user-input input {       
+    flex:2;
+    flex-direction: column;       
+    margin: 0 auto;
+    width: 60%;    
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+}

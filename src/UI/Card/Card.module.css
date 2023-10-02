@@ -1,0 +1,7 @@
+.card {
+    border: 1px solid #eee;
+    box-shadow: 0 2px 3px #ccc;
+    padding: 20px;
+    text-align: center;        
+    background-color: color-mix(in hsl shorter hue, #7c7ae2 20%, #0c0b25 80%);
+  }
