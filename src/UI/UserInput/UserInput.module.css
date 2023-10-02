@@ -1,4 +1,12 @@
+.user-input {
+    display: flex;
+    flex-direction: row;
+    align-items: center;    
+}
+
 .user-input label {
+    display: flex;
+    flex: 1;
     color: #fa923f;
     font-size: 1.2rem;
     font-weight: bold;
@@ -6,9 +14,11 @@
 }
 
 .user-input input {
-    display: block;
+    display: flex;
+    flex:2;
+    flex-direction: column;       
     margin: 0 auto;
-    width: 60%;
+    width: 60%;    
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
