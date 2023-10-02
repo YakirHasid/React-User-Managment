@@ -4,7 +4,8 @@ import styles from "./ErrorModal.module.css";
 
 const ErrorModal = (props) => {
   return (
-      <div className={styles["error-modal"]}>
+    <div className={styles["error-modal"]}>
+      <div className={styles["error-modal__container"]}>
         <div className={styles["error-modal__elm"]}>
           <h2>{props.title}</h2>
         </div>
@@ -15,6 +16,7 @@ const ErrorModal = (props) => {
           <button onClick={props.onConfirm}>Okay</button>
         </div>
       </div>
+    </div>
   );
 };
 
