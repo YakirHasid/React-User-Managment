@@ -1,7 +1,7 @@
 import "./App.css";
 import AddUserForm from "./components/AddUserForm/AddUserForm.js";
 import Card from "./UI/Card/Card";
-import Users from "./components/Users/Users";
+import UsersList from "./components/Users/UsersList";
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
         <AddUserForm />
       </Card>
       <Card>
-        <Users />
+        <UsersList />
       </Card>
     </div>
   );
