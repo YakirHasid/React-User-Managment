@@ -3,15 +3,18 @@ import UserInput from "../../UI/UserInput/UserInput";
 import Button from "../../UI/Button/Button";
 
 const AddUserForm = (props) => {
-  const [userInput, setUserInput] = useState({ 'username-field': "", 'age-field': "" });
+  const [userInput, setUserInput] = useState({
+    "username-field": "",
+    "age-field": "",
+  });
 
   const submitHandler = (event) => {
     event.preventDefault();
 
     /* user input checks */
     if (
-      userInput['username-field'].trim().length === 0 ||
-      userInput['age-field'].trim().length === 0
+      userInput["username-field"].trim().length === 0 ||
+      userInput["age-field"].trim().length === 0
     ) {
       props.onError(
         "Invalid input",
@@ -19,14 +22,17 @@ const AddUserForm = (props) => {
       );
       return;
     }
-    if (+userInput['age-field'] < 1) {
+    if (+userInput["age-field"] < 1) {
       props.onError("Invalid age", "Please enter a valid age (> 0).");
       return;
     }
 
     /* add user after all checks passed successfully */
-    props.onAddUser(userInput);
-    setUserInput({ 'username-field': "", 'age-field': "" });
+    props.onAddUser({
+      name: userInput["username-field"],
+      age: userInput["age-field"],
+    });
+    setUserInput({ "username-field": "", "age-field": "" });
   };
 
   const userInputChangeHandler = (event) => {
@@ -42,13 +48,13 @@ const AddUserForm = (props) => {
     <form onSubmit={submitHandler}>
       <UserInput
         onChange={userInputChangeHandler}
-        value={userInput['username-field']}
+        value={userInput["username-field"]}
         id="username-field"
         label="Username"
       />
       <UserInput
         onChange={userInputChangeHandler}
-        value={userInput['age-field']}
+        value={userInput["age-field"]}
         id="age-field"
         label="Age (Years)"
       />
