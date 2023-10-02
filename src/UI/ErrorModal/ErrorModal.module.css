@@ -12,6 +12,20 @@
     flex-direction: column;    
 }
 
+.error-modal__container {
+    width: 80%;
+    height: 80%;
+    background-color: lightcoral;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+}
+
 .error-modal__elm {
     display: flex;
     font-size: 30px;        
