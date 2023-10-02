@@ -38,7 +38,7 @@ function App() {
         <AddUserForm onError={errorHandler} onAddUser={addUserHandler} />
       </Card>
       {usersList.length > 0 && (
-        <Card>
+        <Card style={{'margin-top': '50px'}}>
           <UsersList items={usersList} />
         </Card>
       )}
