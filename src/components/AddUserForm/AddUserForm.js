@@ -10,8 +10,8 @@ const AddUserForm = (props) => {
 
     /* user input checks */
     if (
-      userInput.username.trim().length === 0 ||
-      userInput.age.trim().length === 0
+      userInput['username-field'].trim().length === 0 ||
+      userInput['age-field'].trim().length === 0
     ) {
       props.onError(
         "Invalid input",
@@ -19,14 +19,14 @@ const AddUserForm = (props) => {
       );
       return;
     }
-    if (+userInput.age < 1) {
+    if (+userInput['age-field'] < 1) {
       props.onError("Invalid age", "Please enter a valid age (> 0).");
       return;
     }
 
     /* add user after all checks passed successfully */
     props.onAddUser(userInput);
-    setUserInput({ username: "", age: "" });
+    setUserInput({ 'username-field': "", 'age-field': "" });
   };
 
   const userInputChangeHandler = (event) => {
