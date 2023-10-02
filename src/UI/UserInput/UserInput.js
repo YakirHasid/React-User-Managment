@@ -4,9 +4,14 @@ import styles from "./UserInput.module.css";
 
 const UserInput = (props) => {
   return (
-    <div className={styles['user-input']}>
+    <div className={styles["user-input"]}>
       <label htmlFor={props.id}>{props.label}</label>
-      <input type="text" id={props.id} />
+      <input
+        type="text"
+        onChange={props.onChange}
+        value={props.value}
+        id={props.id}
+      />
     </div>
   );
 };

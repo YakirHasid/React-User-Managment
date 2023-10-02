@@ -1,14 +1,14 @@
-import React from 'react'
-import User from './User';
+import React from "react";
+import User from "./User";
 
-const UsersList = () => {
+const UsersList = (props) => {
     return (
-        <div>        
-            <User />  
-            <User />  
-            <User />  
+        <div>
+            {props.items.map((user) => {
+                return <User key={user.id} name={user.name} age={user.age} />;
+            })}
         </div>
-    )
-}
+    );
+};
 
 export default UsersList;

@@ -2,10 +2,10 @@ import React from "react";
 
 import styles from "./User.module.css";
 
-const User = () => {
+const User = (props) => {
     return (
         <div className={styles.user}>        
-            <h2>Max (31 years old)</h2>
+            <h2>{props.name} ({props.age} years old)</h2>
         </div>
     )
 }
