@@ -1,9 +1,13 @@
+import React, {useState} from 'react'
+
 import "./App.css";
 import AddUserForm from "./components/AddUserForm/AddUserForm.js";
 import Card from "./UI/Card/Card";
 import UsersList from "./components/Users/UsersList";
 
 function App() {
+  const [usersList, setUsersList] = useState([]);
+
   const addUserHandler = (user) => {
     console.log(user);
   };
@@ -18,7 +22,7 @@ function App() {
         <AddUserForm onError={errorHandler} onAddUser={addUserHandler} />
       </Card>
       <Card>
-        <UsersList />
+        <UsersList items={usersList} />
       </Card>
     </div>
   );
