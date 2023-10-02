@@ -37,17 +37,19 @@ function App() {
       <Card>
         <AddUserForm onError={errorHandler} onAddUser={addUserHandler} />
       </Card>
-      <Card>
-        <UsersList items={usersList} />
-      </Card>
+      {usersList.length > 0 && (
+        <Card>
+          <UsersList items={usersList} />
+        </Card>
+      )}
 
-        {error && (
-          <ErrorModal
-            title={error.title}
-            message={error.message}
-            onConfirm={abortErrorHandler}
-          />
-        )}
+      {error && (
+        <ErrorModal
+          title={error.title}
+          message={error.message}
+          onConfirm={abortErrorHandler}
+        />
+      )}
     </div>
   );
 }
