@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, { useState } from "react";
 
 import "./App.css";
 import AddUserForm from "./components/AddUserForm/AddUserForm.js";
@@ -9,7 +9,15 @@ function App() {
   const [usersList, setUsersList] = useState([]);
 
   const addUserHandler = (user) => {
-    console.log(user);
+    setUsersList((prevUsersList) => {
+      return [
+        ...prevUsersList,
+        {
+          ...user,
+          id: Math.random().toString(),
+        },
+      ];
+    });
   };
 
   const errorHandler = (title, message) => {
