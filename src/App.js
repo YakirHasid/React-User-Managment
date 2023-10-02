@@ -1,10 +1,13 @@
-import './App.css';
-import AddUserForm from './components/AddUserForm/AddUserForm.js'
+import "./App.css";
+import AddUserForm from "./components/AddUserForm/AddUserForm.js";
+import Card from "./UI/Card/Card";
 
 function App() {
   return (
     <div className="App">
-      <AddUserForm />
+      <Card>
+        <AddUserForm />
+      </Card>
     </div>
   );
 }
