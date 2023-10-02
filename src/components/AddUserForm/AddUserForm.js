@@ -3,7 +3,7 @@ import UserInput from "../../UI/UserInput/UserInput";
 import Button from "../../UI/Button/Button";
 
 const AddUserForm = (props) => {
-  const [userInput, setUserInput] = useState({ username: "", age: "" });
+  const [userInput, setUserInput] = useState({ 'username-field': "", 'age-field': "" });
 
   const submitHandler = (event) => {
     event.preventDefault();
@@ -42,13 +42,13 @@ const AddUserForm = (props) => {
     <form onSubmit={submitHandler}>
       <UserInput
         onChange={userInputChangeHandler}
-        value={userInput.username}
+        value={userInput['username-field']}
         id="username-field"
         label="Username"
       />
       <UserInput
         onChange={userInputChangeHandler}
-        value={userInput.age}
+        value={userInput['age-field']}
         id="age-field"
         label="Age (Years)"
       />
