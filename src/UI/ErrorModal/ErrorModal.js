@@ -5,6 +5,7 @@ import styles from "./ErrorModal.module.css";
 const ErrorModal = (props) => {
   return (
     <div className={styles["error-modal"]}>
+      <div className={styles["error-modal__bg"]} onClick={props.onConfirm}></div>
       <div className={styles["error-modal__container"]}>
         <div className={styles["error-modal__elm"]}>
           <h2>{props.title}</h2>
